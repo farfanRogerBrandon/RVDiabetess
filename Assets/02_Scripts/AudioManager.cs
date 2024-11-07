@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource musicAudioSource; //mpusica
 
-    public AudioSource sfxAS; //sonidos
+    public AudioSource sfxASFruit; //sonidos
 
 
     public float musicVolume = 0.3f;
@@ -19,7 +19,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(AudioClip sound)
     {
-        sfxAS.PlayOneShot(sound);
+        if (sfxASFruit.isPlaying)
+        {
+            return;
+        }
+       
+        sfxASFruit.PlayOneShot(sound);
     }
 
 
@@ -58,8 +63,8 @@ public class AudioManager : MonoBehaviour
         musicAudioSource.loop = true;
 
 
-        sfxAS.volume = sfxVolume;
-        sfxAS.loop = false;
+        sfxASFruit.volume = sfxVolume;
+        sfxASFruit.loop = false;
 
     }
 
