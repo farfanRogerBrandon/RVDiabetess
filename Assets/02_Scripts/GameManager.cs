@@ -45,17 +45,13 @@ public class GameManager : MonoBehaviour
     public AudioClip partTakenAC;
 
 
+    public int count = 0;
     private void Awake()
     {
-        if (instance == null)
-        {
+       
             instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject );
-        }
+          
+      
     }
     void Start()
     {
@@ -85,7 +81,8 @@ public class GameManager : MonoBehaviour
 
         if (fruitsPassed >= fruitsThatCanPass)
         {
-            SceneManager.LoadScene(0);
+            int n = Random.Range(1, 4);
+            SceneManager.LoadScene("Cooking"+n);
         }
 
 

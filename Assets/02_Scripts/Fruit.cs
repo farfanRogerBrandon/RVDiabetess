@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fruit : MonoBehaviour
 {
@@ -36,14 +37,28 @@ public class Fruit : MonoBehaviour
     public bool isShopping = true;
 
 
+
+
+
+
+    public List<GameObject> fruitsAnotherDish;
+
+
+    public bool isFollowing= false;
+
+
     void Start()
     {
-        Destroy(gameObject, timeToDIe);
-        foreach (var item in audioClips)
+        if (isShopping)
         {
-            clipStatuses.Add(new ClipStatus() { ac = item });
-                    
+            Destroy(gameObject, timeToDIe);
+            foreach (var item in audioClips)
+            {
+                clipStatuses.Add(new ClipStatus() { ac = item });
+
+            }
         }
+      
     }
 
     // Update is called once per frame
@@ -64,12 +79,7 @@ public class Fruit : MonoBehaviour
     }
 
 
-    private void OnMouseDown()
-    {
-        Destroy(gameObject);
-    }
-
-
+   
 
     public void PointingGG()
     {
@@ -135,6 +145,89 @@ public class Fruit : MonoBehaviour
         }
         
     }
+
+
+
+
+    public void PointingGG2()
+    {
+        if (!isShopping)
+        {
+            if (!isBeingTaked)
+            {
+                isBeingTaked = true;
+                GameManager.instance.selectedFruit = this;
+              //  GameManager.instance.SetFruitData();
+
+             //   AudioManager.instance.PlaySFX(audioClips[Random.Range(0, audioClips.Count)]);
+
+                //   GameObject gmm = Instantiate(GameManager.instance.partTaked, gameObject.transform.position, Quaternion.identity);
+                //    Destroy(gmm, 2); 
+                AudioManager.instance.PlaySoubdSFX(GameManager.instance.partTakenAC);
+
+
+
+            }
+            if (!isBeingAnimated)
+            {
+                isBeingAnimated = true;
+                animator.SetTrigger("Take");
+            }
+            timeBeingPointed += Time.deltaTime;
+            if (timeBeingPointed >= maxTimeToBePOinted)
+            {
+              //  GameObject gmm = Instantiate(GameManager.instance.partEaten, gameObject.transform.position, Quaternion.identity);
+              //  Destroy(gmm, 2);
+                AudioManager.instance.PlaySoubdSFX(GameManager.instance.partEatenAC);
+
+                Destroy(gameObject);
+             
+                if (type == FruitType.Health)
+                {
+                    // 
+
+
+                    foreach (var item in fruitsAnotherDish)
+                    {
+                        item.gameObject.SetActive(true);
+                    }
+                    GameManager.instance.count++;
+                    if (GameManager.instance.count >= 3)
+                    {
+                        SceneManager.LoadScene("Shopping");
+                    }
+                }
+                else
+                {
+                    SceneManager.LoadScene(0);
+                }
+            }
+
+        }
+        else
+        {
+            if (!isBeingTaked)
+            {
+                isBeingTaked = true;
+                GameManager.instance.selectedFruit = this;
+//                GameManager.instance.SetFruitData();
+
+               // AudioManager.instance.PlaySFX(audioClips[Random.Range(0, audioClips.Count)]);
+            }
+            if (!isBeingAnimated)
+            {
+                isBeingAnimated = true;
+                animator.SetTrigger("Take");
+            }
+
+        }
+
+    }
+
+
+
+
+
 
 
     public void DontTake()
