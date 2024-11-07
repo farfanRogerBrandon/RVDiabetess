@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
         if (fruitsPassed >= fruitsThatCanPass)
         {
             int n = Random.Range(1, 4);
+            
             SceneManager.LoadScene("Cooking"+n);
         }
 
@@ -94,7 +95,10 @@ public class GameManager : MonoBehaviour
 
         if (FruitsTaked >= maxFruitsTaked)
         {
-            SceneManager.LoadScene(0);
+            //GANAR
+            int n = Random.Range(1, 4);
+            SceneManager.LoadScene("Cooking" + n);
+
         }
     }
 
