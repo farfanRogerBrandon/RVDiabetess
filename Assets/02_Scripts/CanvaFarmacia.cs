@@ -17,6 +17,7 @@ public class CanvaFarmacia : MonoBehaviour
     [SerializeField] private GameObject texto1;
     [SerializeField] private GameObject texto2;
     [SerializeField] private GameObject texto3;
+    [SerializeField] private GameObject mensaje;
 
     private void Start()
     {
@@ -33,5 +34,6 @@ public class CanvaFarmacia : MonoBehaviour
         LeanTween.moveX(texto1.GetComponent<RectTransform>(), 490, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
         LeanTween.moveX(texto2.GetComponent<RectTransform>(), 17, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
         LeanTween.moveX(texto3.GetComponent<RectTransform>(), -478, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
+        LeanTween.moveX(mensaje.GetComponent<RectTransform>(), 106, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
     }
 }
