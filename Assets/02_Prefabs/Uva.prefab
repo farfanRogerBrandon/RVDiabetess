@@ -129,8 +129,9 @@ MonoBehaviour:
   isBeingTaked: 0
   animator: {fileID: 8072428842376120061}
   audioClips:
-  - {fileID: 8300000, guid: 8560494f53c6ce24f93fe196d97b82cd, type: 3}
-  - {fileID: 8300000, guid: 243176fcbebaf7f48a0360a982f151c3, type: 3}
+  - {fileID: 8300000, guid: 95c34a37c09c3314f90d929f96727676, type: 3}
+  - {fileID: 8300000, guid: a2c03b18d83753044ae6b2224f85315f, type: 3}
+  - {fileID: 8300000, guid: 27c53692ed1cab041bbc18a08ec1745e, type: 3}
   fruitName: Uva
   isRecommended: No Recomendado
   type: 1

@@ -129,9 +129,9 @@ MonoBehaviour:
   isBeingTaked: 0
   animator: {fileID: 8072428842376120061}
   audioClips:
-  - {fileID: 8300000, guid: ab452d20d32b8dc448810e7038734e6e, type: 3}
-  - {fileID: 8300000, guid: 3663c4ab5eb823846bd41d7d2f084bc4, type: 3}
-  - {fileID: 8300000, guid: a031f550f3ceda54288543eb9a3cafa8, type: 3}
+  - {fileID: 8300000, guid: e70998f4009f1f94eb7df1121b04ba7d, type: 3}
+  - {fileID: 8300000, guid: 7434401a5fde54d469412f3f95ba22a3, type: 3}
+  - {fileID: 8300000, guid: 8aaeb807e3a2d294a815f36ed8f89377, type: 3}
   fruitName: "Ar\xE1ndanos"
   isRecommended: Recomendado
   type: 0
