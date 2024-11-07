@@ -131,12 +131,12 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 6a7ed6c95d7fab04c92700b592fecbfa, type: 3}
   - {fileID: 8300000, guid: 172279cdd1c1a0c4cba71d03cae9da0e, type: 3}
-  - {fileID: 8300000, guid: 6755497031d5cb541b0c1bcc82290800, type: 3}
   - {fileID: 8300000, guid: 18c2ba8241691bc4e8d890f0d0e164a6, type: 3}
   - {fileID: 8300000, guid: d6e700ba987434e4c8f0a28dee928704, type: 3}
   fruitName: Kiwi
   isRecommended: No Recomendado
   type: 0
+  isShopping: 1
 --- !u!54 &2863940702672351304
 Rigidbody:
   m_ObjectHideFlags: 0

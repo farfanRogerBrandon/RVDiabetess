@@ -130,8 +130,9 @@ MonoBehaviour:
   animator: {fileID: 8254820377373516879}
   audioClips:
   - {fileID: 8300000, guid: 6a7ed6c95d7fab04c92700b592fecbfa, type: 3}
-  - {fileID: 8300000, guid: 172279cdd1c1a0c4cba71d03cae9da0e, type: 3}
-  - {fileID: 8300000, guid: 6755497031d5cb541b0c1bcc82290800, type: 3}
+  - {fileID: 8300000, guid: 078c9531e94dbed4aa953d251f91e878, type: 3}
+  - {fileID: 8300000, guid: aa4d10f7c4ec30b489711faddbe67857, type: 3}
+  - {fileID: 8300000, guid: db62062997d77a9409e9bfd756b28d23, type: 3}
   fruitName: Frutilla
   isRecommended: Recomendado
   type: 0

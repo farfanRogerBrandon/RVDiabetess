@@ -129,7 +129,9 @@ MonoBehaviour:
   isBeingTaked: 0
   animator: {fileID: 8072428842376120061}
   audioClips:
-  - {fileID: 8300000, guid: 6a7ed6c95d7fab04c92700b592fecbfa, type: 3}
+  - {fileID: 8300000, guid: 27b4ba2e2b755404b81cae07266f5411, type: 3}
+  - {fileID: 8300000, guid: 6de50d36adf34c84883eb6fbd000604f, type: 3}
+  - {fileID: 8300000, guid: e032057ca0f9ce5458cdf4e23de1da15, type: 3}
   fruitName: Higo
   isRecommended: No Recomendado
   type: 1

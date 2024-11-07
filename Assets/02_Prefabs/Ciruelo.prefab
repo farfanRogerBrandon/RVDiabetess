@@ -129,8 +129,6 @@ MonoBehaviour:
   isBeingTaked: 0
   animator: {fileID: 8072428842376120061}
   audioClips:
-  - {fileID: 8300000, guid: 6a7ed6c95d7fab04c92700b592fecbfa, type: 3}
-  - {fileID: 8300000, guid: 172279cdd1c1a0c4cba71d03cae9da0e, type: 3}
   - {fileID: 8300000, guid: 6755497031d5cb541b0c1bcc82290800, type: 3}
   - {fileID: 8300000, guid: 2a4020ae05acbdb4fa15f66ad14b9418, type: 3}
   - {fileID: 8300000, guid: 43d288dd9d0a29e4db069e4041e0e806, type: 3}
@@ -138,6 +136,7 @@ MonoBehaviour:
   fruitName: Ciruela
   isRecommended: Recomendado
   type: 0
+  isShopping: 1
 --- !u!54 &7140598918837717891
 Rigidbody:
   m_ObjectHideFlags: 0
