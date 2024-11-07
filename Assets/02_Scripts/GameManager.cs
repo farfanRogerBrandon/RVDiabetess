@@ -38,6 +38,13 @@ public class GameManager : MonoBehaviour
     public Image fruitsTakedBar;
 
 
+    public GameObject partEaten;
+    public GameObject partTaked;
+
+    public AudioClip partEatenAC;
+    public AudioClip partTakenAC;
+
+
     private void Awake()
     {
         if (instance == null)

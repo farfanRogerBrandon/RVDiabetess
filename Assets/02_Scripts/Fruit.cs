@@ -82,6 +82,13 @@ public class Fruit : MonoBehaviour
                 GameManager.instance.SetFruitData();
 
                 AudioManager.instance.PlaySFX(audioClips[Random.Range(0,audioClips.Count)]);    
+
+             //   GameObject gmm = Instantiate(GameManager.instance.partTaked, gameObject.transform.position, Quaternion.identity);
+            //    Destroy(gmm, 2); 
+
+
+
+
             }
             if (!isBeingAnimated) 
             {
@@ -91,6 +98,9 @@ public class Fruit : MonoBehaviour
             timeBeingPointed+= Time.deltaTime;
             if (timeBeingPointed >= maxTimeToBePOinted)
             {
+                GameObject gmm = Instantiate(GameManager.instance.partEaten, gameObject.transform.position, Quaternion.identity);
+                Destroy(gmm, 2);
+
                 Destroy(gameObject);
                 GameManager.instance.DontSetFrui();
                 if(type == FruitType.Health)
