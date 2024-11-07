@@ -13,6 +13,9 @@ public class CanvasScript : MonoBehaviour
     public GameObject fruit;
 
     public bool isShopping = true;
+
+
+    public GameObject squrePoint;
     private void Update()
     {
         if (isShopping)
@@ -29,11 +32,11 @@ public class CanvasScript : MonoBehaviour
             fruit.transform.position = new Vector3(worldPos.x, worldPos.y, fruit.transform.position.z);
 
             var position = mainCamera.WorldToScreenPoint(.transform.position);*/
-           ;   
+           
+            fruit.transform.position = squrePoint.transform.position;
 
-            
-            
-            
+
+
         }
     }
 
@@ -41,7 +44,6 @@ public class CanvasScript : MonoBehaviour
     {
         Vector3 screenPos = RectTransformUtility.WorldToScreenPoint(mainCamera, canvasElement.position);
 
-        // Lanzar el rayo desde la cámara a la posición del canvas
         Ray ray = mainCamera.ScreenPointToRay(screenPos);
 
         if (Physics.Raycast(ray, out RaycastHit hit))

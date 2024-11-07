@@ -348,6 +348,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1276474634}
   fruit: {fileID: 1416554933}
   isShopping: 0
+  squrePoint: {fileID: 1952417213}
   moveSpeed: 5
 --- !u!183 &319121287
 Cloth:
@@ -1520,6 +1521,10 @@ MonoBehaviour:
   lifeBar: {fileID: 370979239}
   fastFoodBar: {fileID: 1378758365}
   fruitsTakedBar: {fileID: 1975328848}
+  partEaten: {fileID: 0}
+  partTaked: {fileID: 0}
+  partEatenAC: {fileID: 0}
+  partTakenAC: {fileID: 0}
 --- !u!114 &980464404
 MonoBehaviour:
   m_ObjectHideFlags: 0
