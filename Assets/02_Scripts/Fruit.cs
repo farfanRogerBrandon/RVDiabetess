@@ -199,7 +199,7 @@ public class Fruit : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene(0);
+                    SceneManager.LoadScene("GAMEOVER");
                 }
             }
 

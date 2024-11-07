@@ -3060,7 +3060,7 @@ MonoBehaviour:
   fruitsTakedBar: {fileID: 0}
   partEaten: {fileID: 0}
   partTaked: {fileID: 0}
-  partEatenAC: {fileID: 8300000, guid: 7489b0b0394be964fb3620823907ded2, type: 3}
+  partEatenAC: {fileID: 8300000, guid: ba7f12c75de948048861bd7ea123b39c, type: 3}
   partTakenAC: {fileID: 8300000, guid: 7489b0b0394be964fb3620823907ded2, type: 3}
   count: 0
 --- !u!114 &980464404

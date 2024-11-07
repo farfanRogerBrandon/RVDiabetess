@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         {
             int n = Random.Range(1, 4);
             
-            SceneManager.LoadScene("Cooking"+n);
+            SceneManager.LoadScene("GAMEOVER");
         }
 
 
@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
 
         if (fatFood >= maxFatFood)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("GAMEOVER");
         }
     }
 
