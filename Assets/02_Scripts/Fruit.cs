@@ -81,11 +81,11 @@ public class Fruit : MonoBehaviour
                 GameManager.instance.selectedFruit = this;
                 GameManager.instance.SetFruitData();
 
-                AudioManager.instance.PlaySFX(audioClips[Random.Range(0,audioClips.Count)]);    
+                AudioManager.instance.PlaySFX(audioClips[Random.Range(0,audioClips.Count)]);
 
-             //   GameObject gmm = Instantiate(GameManager.instance.partTaked, gameObject.transform.position, Quaternion.identity);
-            //    Destroy(gmm, 2); 
-
+                //   GameObject gmm = Instantiate(GameManager.instance.partTaked, gameObject.transform.position, Quaternion.identity);
+                //    Destroy(gmm, 2); 
+                AudioManager.instance.PlaySoubdSFX(GameManager.instance.partTakenAC);
 
 
 
@@ -100,6 +100,7 @@ public class Fruit : MonoBehaviour
             {
                 GameObject gmm = Instantiate(GameManager.instance.partEaten, gameObject.transform.position, Quaternion.identity);
                 Destroy(gmm, 2);
+                AudioManager.instance.PlaySoubdSFX(GameManager.instance.partEatenAC);
 
                 Destroy(gameObject);
                 GameManager.instance.DontSetFrui();

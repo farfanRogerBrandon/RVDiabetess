@@ -26,9 +26,14 @@ public class AudioManager : MonoBehaviour
        
         sfxASFruit.PlayOneShot(sound);
     }
+    public void PlaySoubdSFX(AudioClip sound)
+    {
 
 
-    public void SetMusic(AudioClip audioClip)
+        sfxASFruit.PlayOneShot(sound);
+    }
+
+        public void SetMusic(AudioClip audioClip)
     {
         musicAudioSource.Stop();
         musicAudioSource.clip = audioClip;

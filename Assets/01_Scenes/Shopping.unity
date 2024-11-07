@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2888,6 +2888,10 @@ MonoBehaviour:
   lifeBar: {fileID: 964543021}
   fastFoodBar: {fileID: 1656462892}
   fruitsTakedBar: {fileID: 1216353772}
+  partEaten: {fileID: 1056206005984099780, guid: f5ce0e7c1a55f6c44b5009726a1c287a, type: 3}
+  partTaked: {fileID: 3617349858508950063, guid: b0996c68dae255b429d0d8b56d4784fb, type: 3}
+  partEatenAC: {fileID: 8300000, guid: b3d733c08db492c458c13c15f829c1ad, type: 3}
+  partTakenAC: {fileID: 8300000, guid: 7489b0b0394be964fb3620823907ded2, type: 3}
 --- !u!1 &1828601335
 GameObject:
   m_ObjectHideFlags: 0
