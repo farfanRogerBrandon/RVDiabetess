@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
 
             float x = Random.Range(minPointX.position.x, maxPointX.position.x);
 
-            Instantiate(fruits[0], new Vector3(x, minPointX.position.y, minPointX.position.z), Quaternion.Euler(0,180,0));
+            Instantiate(fruits[Random.Range(0, fruits.Count)], new Vector3(x, minPointX.position.y, minPointX.position.z), Quaternion.Euler(0,180,0));
         }
     }
 }

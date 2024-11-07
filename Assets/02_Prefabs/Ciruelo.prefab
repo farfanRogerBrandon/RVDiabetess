@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 3.4, y: 3.4, z: 3.4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8112924121148057659}
@@ -120,23 +120,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b9712600c3d33408daed974ce5358d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.71
+  speed: 4.12
   theValue: 5
   timeToDIe: 700
-  maxTimeToBePOinted: 4.5
+  maxTimeToBePOinted: 3.5
   timeBeingPointed: 0
   isBeingAnimated: 0
   isBeingTaked: 0
   animator: {fileID: 8072428842376120061}
   audioClips:
-  - {fileID: 8300000, guid: 6a7ed6c95d7fab04c92700b592fecbfa, type: 3}
-  - {fileID: 8300000, guid: 172279cdd1c1a0c4cba71d03cae9da0e, type: 3}
   - {fileID: 8300000, guid: 6755497031d5cb541b0c1bcc82290800, type: 3}
   - {fileID: 8300000, guid: 2a4020ae05acbdb4fa15f66ad14b9418, type: 3}
   - {fileID: 8300000, guid: 43d288dd9d0a29e4db069e4041e0e806, type: 3}
   - {fileID: 8300000, guid: ff2284b5ab3b48c498490c545912c23e, type: 3}
   fruitName: Ciruela
   isRecommended: Recomendado
+  type: 0
+  isShopping: 1
 --- !u!54 &7140598918837717891
 Rigidbody:
   m_ObjectHideFlags: 0
