@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -19,6 +20,24 @@ public class GameManager : MonoBehaviour
     public GameObject gmTitle;
     public GameObject gmIsRecommended;
 
+
+    public float FruitsTaked = 0;
+          
+    public float maxFruitsTaked = 15;
+          
+    public float maxFatFood = 3;
+    public float fatFood = 0;
+
+
+    public float fruitsThatCanPass = 7;
+    public float fruitsPassed = 0;
+
+
+    public Image lifeBar;
+    public Image fastFoodBar;
+    public Image fruitsTakedBar;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -33,7 +52,16 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+        UpdateLifeBars();
+    }
+    void UpdateLifeBars()
+    {
+        lifeBar.fillAmount = (fruitsThatCanPass-fruitsPassed) / fruitsThatCanPass ;
+
+        fastFoodBar.fillAmount = fatFood / maxFatFood;
+        fruitsTakedBar.fillAmount = FruitsTaked / maxFruitsTaked;
+
+
     }
 
     // Update is called once per frame
@@ -42,6 +70,40 @@ public class GameManager : MonoBehaviour
         
     }
 
+
+    public void fruitPassed()
+    {
+       fruitsPassed++;
+        UpdateLifeBars();
+
+        if (fruitsPassed >= fruitsThatCanPass)
+        {
+            SceneManager.LoadScene(0);
+        }
+
+
+    }
+    public void fruitEated()
+    {
+        FruitsTaked ++;
+        UpdateLifeBars();
+
+        if (FruitsTaked >= maxFruitsTaked)
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    public void fatFoodEated()
+    {
+        fatFood++;
+        UpdateLifeBars();
+
+        if (fatFood >= maxFatFood)
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
 
     public void SetFruitData()
@@ -59,7 +121,6 @@ public class GameManager : MonoBehaviour
         gmTitle.SetActive(false);
         gmIsRecommended.SetActive(false);
        
-
     }
 
 

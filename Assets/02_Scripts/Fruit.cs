@@ -31,6 +31,10 @@ public class Fruit : MonoBehaviour
     public string fruitName = "Ciruela";
     public string isRecommended = "Recomendado";
 
+    public FruitType type = FruitType.Health;
+
+    public bool isShopping = true;
+
 
     void Start()
     {
@@ -45,11 +49,18 @@ public class Fruit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isBeingTaked)
+        if (isShopping) {
+            if (!isBeingTaked)
+            {
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+            }
+        }
+        else
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         }
+       
     }
 
 
@@ -62,25 +73,56 @@ public class Fruit : MonoBehaviour
 
     public void PointingGG()
     {
-        if (!isBeingTaked)
-        {
-            isBeingTaked=true;
-            GameManager.instance.selectedFruit = this;
-            GameManager.instance.SetFruitData();
+        if (isShopping) 
+        { 
+            if (!isBeingTaked)
+            {
+                isBeingTaked=true;
+                GameManager.instance.selectedFruit = this;
+                GameManager.instance.SetFruitData();
 
-            AudioManager.instance.PlaySFX(audioClips[Random.Range(0,audioClips.Count)]);    
+                AudioManager.instance.PlaySFX(audioClips[Random.Range(0,audioClips.Count)]);    
+            }
+            if (!isBeingAnimated) 
+            {
+                isBeingAnimated = true;
+                animator.SetTrigger("Take");
+            }
+            timeBeingPointed+= Time.deltaTime;
+            if (timeBeingPointed >= maxTimeToBePOinted)
+            {
+                Destroy(gameObject);
+                GameManager.instance.DontSetFrui();
+                if(type == FruitType.Health)
+                {
+                    GameManager.instance.fruitEated();
+
+                }
+                else
+                {
+                        GameManager.instance.fatFoodEated();
+                }
+            }
+        
         }
-        if (!isBeingAnimated) 
+        else
         {
-            isBeingAnimated = true;
-            animator.SetTrigger("Take");
+            if (!isBeingTaked)
+            {
+                isBeingTaked = true;
+                GameManager.instance.selectedFruit = this;
+                GameManager.instance.SetFruitData();
+
+                AudioManager.instance.PlaySFX(audioClips[Random.Range(0, audioClips.Count)]);
+            }
+            if (!isBeingAnimated)
+            {
+                isBeingAnimated = true;
+                animator.SetTrigger("Take");
+            }
+            
         }
-        timeBeingPointed+= Time.deltaTime;
-        if (timeBeingPointed >= maxTimeToBePOinted)
-        {
-            Destroy(gameObject);
-            GameManager.instance.DontSetFrui();
-        }
+        
     }
 
 
@@ -95,6 +137,20 @@ public class Fruit : MonoBehaviour
 
 
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("TheWall"))
+        {
+            if(FruitType.Health == type)
+            {
+                GameManager.instance.fruitPassed();
+            }
+           
+
+            Destroy(gameObject);
+        }
     }
 }
 

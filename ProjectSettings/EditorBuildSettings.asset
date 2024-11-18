@@ -4,7 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/01_Scenes/Farmacia.unity
+    guid: 30f549c6d23e50a4cbc13e603d220c52
+  - enabled: 1
+    path: Assets/01_Scenes/Metformina.unity
+    guid: 9db9e22af4341ad44899953f26d320c9
+  - enabled: 1
+    path: Assets/01_Scenes/Linagliptina.unity
+    guid: ebf7e4a9a3c67ef489914f2b6bc3c4ed
+  - enabled: 1
+    path: Assets/01_Scenes/Empagliflozina.unity
+    guid: df14c3d8ea2c57247bb7d1b3003cb5a4
+  - enabled: 1
+    path: Assets/01_Scenes/Cooking.unity
+    guid: 32ee7516c333a6c45aa979a0fc98777e
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2304cdfa20e37f34cb4b159d72e44e2f, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 04001da96e1b98141b84fb6be7631eff, type: 2}
