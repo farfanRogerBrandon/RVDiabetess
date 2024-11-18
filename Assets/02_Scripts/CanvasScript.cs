@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
+using UnityEngine.SceneManagement;
 
 public class CanvasScript : MonoBehaviour
 {
@@ -13,14 +14,24 @@ public class CanvasScript : MonoBehaviour
     public GameObject fruit;
 
     public bool isShopping = true;
+    public bool isMenu = false;
 
+    public bool isSelecting = false;
 
     public GameObject squrePoint;
+
+    public GameObject btnOk;
+    public GameObject btnOkGM;
+
     private void Update()
     {
         if (isShopping)
         {
             CheckCollision();
+        }
+        else if (isMenu)
+        {
+            CheckCollision3();
         }
         else
         {
@@ -147,6 +158,49 @@ public class CanvasScript : MonoBehaviour
                 GameManager.instance.selectedFruit.DontTake();
 
 
+            }
+
+        }
+    }
+    void CheckCollision3()
+    {
+        Vector3 screenPos = RectTransformUtility.WorldToScreenPoint(mainCamera, canvasElement.position);
+
+        Ray ray = mainCamera.ScreenPointToRay(screenPos);
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            if (hit.collider.gameObject.CompareTag("btnCanvas"))
+            {
+
+                if (!isSelecting)
+                {
+                    btnOk.SetActive(true);
+                    btnOkGM.SetActive(true);
+
+                    isSelecting = true;
+                } 
+
+            }
+            if (hit.collider.gameObject.CompareTag(btnOk.tag))
+            {
+                SceneManager.LoadScene(1);
+
+            }
+            else
+            {
+                if (isSelecting)
+                {
+                    isSelecting = false;
+                }
+            }
+          
+        }
+        else
+        {
+            if (isSelecting)
+            {
+                isSelecting = false;
             }
 
         }

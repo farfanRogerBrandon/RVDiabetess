@@ -134,7 +134,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 18c2ba8241691bc4e8d890f0d0e164a6, type: 3}
   - {fileID: 8300000, guid: d6e700ba987434e4c8f0a28dee928704, type: 3}
   fruitName: Kiwi
-  isRecommended: No Recomendado
+  isRecommended: Recomendado
   type: 0
   isShopping: 1
   fruitsAnotherDish: []
@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ed09dd9a2e28f34aa08eb20e87d7168, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.53666675
+      value: 0.071
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ed09dd9a2e28f34aa08eb20e87d7168, type: 3}
       propertyPath: m_LocalRotation.w

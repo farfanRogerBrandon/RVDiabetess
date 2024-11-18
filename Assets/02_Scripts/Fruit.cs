@@ -184,9 +184,7 @@ public class Fruit : MonoBehaviour
              
                 if (type == FruitType.Health)
                 {
-                    // 
-
-
+                    
                     foreach (var item in fruitsAnotherDish)
                     {
                         item.gameObject.SetActive(true);
