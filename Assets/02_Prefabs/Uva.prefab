@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4, y: 3.4, z: 3.4}
+  m_LocalScale: {x: 3.9300003, y: 3.9300003, z: 3.9300003}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8112924121148057659}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b9712600c3d33408daed974ce5358d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleEffectPrefab: {fileID: 7180532509541184775, guid: 8cea9dcb9bf8d1c429dc1cf0920350ba, type: 3}
   speed: 2
   theValue: 5
   timeToDIe: 673
@@ -129,12 +130,15 @@ MonoBehaviour:
   isBeingTaked: 0
   animator: {fileID: 8072428842376120061}
   audioClips:
-  - {fileID: 8300000, guid: 8560494f53c6ce24f93fe196d97b82cd, type: 3}
-  - {fileID: 8300000, guid: 243176fcbebaf7f48a0360a982f151c3, type: 3}
+  - {fileID: 8300000, guid: 95c34a37c09c3314f90d929f96727676, type: 3}
+  - {fileID: 8300000, guid: a2c03b18d83753044ae6b2224f85315f, type: 3}
+  - {fileID: 8300000, guid: 27c53692ed1cab041bbc18a08ec1745e, type: 3}
   fruitName: Uva
   isRecommended: No Recomendado
   type: 1
   isShopping: 1
+  fruitsAnotherDish: []
+  isFollowing: 0
 --- !u!54 &7140598918837717891
 Rigidbody:
   m_ObjectHideFlags: 0

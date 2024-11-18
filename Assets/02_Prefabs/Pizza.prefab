@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4, y: 3.4, z: 3.4}
+  m_LocalScale: {x: 3.9300003, y: 3.9300003, z: 3.9300003}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8112924121148057659}
@@ -106,8 +106,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.33800718
+  m_Center: {x: -0, y: 0.33125865, z: -0}
 --- !u!114 &8947381425204040128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b9712600c3d33408daed974ce5358d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleEffectPrefab: {fileID: 1126007600624064302, guid: aef037884b133ff40a29da20606b254b, type: 3}
   speed: 4.5
   theValue: 5
   timeToDIe: 700
@@ -137,6 +138,8 @@ MonoBehaviour:
   isRecommended: No Recomendado
   type: 1
   isShopping: 1
+  fruitsAnotherDish: []
+  isFollowing: 0
 --- !u!54 &7140598918837717891
 Rigidbody:
   m_ObjectHideFlags: 0

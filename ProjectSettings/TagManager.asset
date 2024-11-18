@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Fruit
   - TheWall
+  - plato
+  - ok
+  - btnCanvas
   layers:
   - Default
   - TransparentFX

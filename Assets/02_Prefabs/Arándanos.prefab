@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4, y: 3.4, z: 3.4}
+  m_LocalScale: {x: 3.6300004, y: 3.6300004, z: 3.6300004}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8112924121148057659}
@@ -106,8 +106,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.40483007
+  m_Center: {x: 0, y: 0.3366313, z: 0.010659313}
 --- !u!114 &8947381425204040128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b9712600c3d33408daed974ce5358d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleEffectPrefab: {fileID: 6131696530782142002, guid: 5353511ab6630704a9a1611d2b2d1e81, type: 3}
   speed: 4.33
   theValue: 5
   timeToDIe: 700
@@ -129,13 +130,15 @@ MonoBehaviour:
   isBeingTaked: 0
   animator: {fileID: 8072428842376120061}
   audioClips:
-  - {fileID: 8300000, guid: ab452d20d32b8dc448810e7038734e6e, type: 3}
-  - {fileID: 8300000, guid: 3663c4ab5eb823846bd41d7d2f084bc4, type: 3}
-  - {fileID: 8300000, guid: a031f550f3ceda54288543eb9a3cafa8, type: 3}
+  - {fileID: 8300000, guid: e70998f4009f1f94eb7df1121b04ba7d, type: 3}
+  - {fileID: 8300000, guid: 7434401a5fde54d469412f3f95ba22a3, type: 3}
+  - {fileID: 8300000, guid: 8aaeb807e3a2d294a815f36ed8f89377, type: 3}
   fruitName: "Ar\xE1ndanos"
   isRecommended: Recomendado
   type: 0
   isShopping: 1
+  fruitsAnotherDish: []
+  isFollowing: 0
 --- !u!54 &7140598918837717891
 Rigidbody:
   m_ObjectHideFlags: 0
