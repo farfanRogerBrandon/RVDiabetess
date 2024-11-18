@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/01_Scenes/Farmacia3D.unity
+    guid: ea40022dce1215d449e7fd46fafce99d
+  - enabled: 1
     path: Assets/01_Scenes/StartMenu.unity
     guid: bcc23e7ba1851884485f3a25351ada7c
   - enabled: 1

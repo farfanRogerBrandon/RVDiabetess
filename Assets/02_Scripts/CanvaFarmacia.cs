@@ -21,9 +21,9 @@ public class CanvaFarmacia : MonoBehaviour
 
     private void Start()
     {
-        LeanTween.moveX(tarjeta.GetComponent<RectTransform>(), 490, 1f).setEase(LeanTweenType.easeInOutBack);
-        LeanTween.moveX(tarjeta2.GetComponent<RectTransform>(), 17, 1f).setEase(LeanTweenType.easeInOutBack);
-        LeanTween.moveX(tarjeta3.GetComponent<RectTransform>(), -478, 1f).setEase(LeanTweenType.easeInOutBack);
+        LeanTween.moveX(tarjeta.GetComponent<RectTransform>(), 494, 1f).setEase(LeanTweenType.easeInOutBack);
+        LeanTween.moveX(tarjeta2.GetComponent<RectTransform>(), 19, 1f).setEase(LeanTweenType.easeInOutBack);
+        LeanTween.moveX(tarjeta3.GetComponent<RectTransform>(), -474, 1f).setEase(LeanTweenType.easeInOutBack);
         LeanTween.moveX(imagen1.GetComponent<RectTransform>(), 491, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutBack);
         LeanTween.moveX(imagen2.GetComponent<RectTransform>(), 20, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutBack);
         LeanTween.moveX(imagen3.GetComponent<RectTransform>(), -485, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
@@ -34,6 +34,6 @@ public class CanvaFarmacia : MonoBehaviour
         LeanTween.moveX(texto1.GetComponent<RectTransform>(), 490, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
         LeanTween.moveX(texto2.GetComponent<RectTransform>(), 17, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
         LeanTween.moveX(texto3.GetComponent<RectTransform>(), -478, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
-        LeanTween.moveX(mensaje.GetComponent<RectTransform>(), 106, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
+        LeanTween.moveX(mensaje.GetComponent<RectTransform>(), -250, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCirc);
     }
 }
